@@ -14,7 +14,7 @@ def profissao(request):
 
    busca = request.GET.get('search')
    if busca:
-      listagem = Profissao.objects.filter(profissao__icontains=busca)
+      listagem = Profissao.objects.using('profissoes_db').filter(profissao__icontains=busca)
 
    params = {
       'form': form,

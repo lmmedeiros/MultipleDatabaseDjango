@@ -14,8 +14,8 @@ class PessoaForm(forms.ModelForm):
       fields = '__all__'
 
 class SearchForm(forms.ModelForm):
-    search = forms.CharField(required=False, widget=forms.TextInput())
+   search = forms.CharField(required=False, widget=forms.TextInput())
 
-    class Meta:
-        model = Pessoa
-        fields = ['search']
+   class Meta:
+      model = Pessoa
+      fields = ['search']
