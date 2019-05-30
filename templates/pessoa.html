@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Multiple Databases with Django 2.0</title>
+   </head>
+   <body>
+      <header>
+         <h1>Pessoa view</h1><br>
+         <a href="{% url 'profissoes:profissao' %}">Cadastrar profissao</a> | 
+         <a href="{% url 'index:index' %}">Inicio</a>
+      </header>
+
+      <hr>
+
+      <form action="{% url 'pessoas:pessoa' %}" method="POST">
+         {% csrf_token %}
+         {{form.as_p}}
+         <button type="submit">Salvar</button>
+      </form>
+
+      <hr>
+      
+      <table>
+         <thead>
+            <tr>
+               <th>#</th>
+               <th>Nome</th>
+               <th>Profissão</th>
+            </tr>
+         </thead>
+         <tbody>
+            {% for value in listagem %}
+            <tr>
+               <th>
+                  <td>{{value.id}}</td>
+                  <td>{{value.nome}}</td>
+                  <td>{{value.profissao}}</td>
+               </th>
+            </tr>
+            {% endfor %}
+         </tbody>
+      </table>
+
+   </body>
+</html>

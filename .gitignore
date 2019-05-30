@@ -1,0 +1,16 @@
+db.sqlite3
+pessoas.sqlite3
+profissoes.sqlite3
+
+venv
+.vscode
+.idea
+
+Core/__pycache__
+Pessoa/__pycache__
+Profissao/__pycache__
+config/__pycache__
+
+Core/migrations
+Pessoa/migrations
+Profissao/migrations

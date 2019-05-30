@@ -1,0 +1,11 @@
+UMA EXEMPLIFICAÇÃO DE USO DE MULTIPLOS BANCO DE DADOS CONECTADOS.
+
+URLS = [
+   http://127.0.0.1:8000/ -> Index
+
+   http://127.0.0.1:8000/pessoas/view/ -> Pessoas
+
+   http://127.0.0.1:8000/profissoes/view/ -> Profissões
+]
+
+Para instalar as dependências use: "pip install -r requirements.txt"

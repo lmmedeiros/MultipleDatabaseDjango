@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Multiple Databases with Django 2.0</title>
+   </head>
+   
+   <body>
+      <header style="text-align: center;">
+         <h1>Studying multiple databases with Django</h1>
+         <small>
+            <p>created by: Wendrew Soares de Oliveira</p>
+         </small>
+      </header>
+
+      <hr><br>
+
+      <a href="{% url 'profissoes:profissao' %}">Cadastrar profissão</a> | 
+      <a href="{% url 'pessoas:pessoa' %}">Cadastrar pessoa</a>
+
+   </body>
+</html>
