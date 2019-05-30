@@ -12,3 +12,10 @@ class PessoaForm(forms.ModelForm):
    class Meta:
       model = Pessoa
       fields = '__all__'
+
+class SearchForm(forms.ModelForm):
+    search = forms.CharField(required=False, widget=forms.TextInput())
+
+    class Meta:
+        model = Pessoa
+        fields = ['search']
