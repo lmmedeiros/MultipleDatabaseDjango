@@ -21,14 +21,14 @@ class ProfissaoRouter(object):
       """Determine if relationship is allowed between two objects."""
 
       # Allow any relation between two models that are both in the Example app.
-      if obj1._meta.app_label == 'Profissao' and obj2._meta.app_label == 'Profissao':
+      if obj1._meta.app_label == 'Profissao' and obj2._meta.app_label == 'Pessoa':
          return True
       # No opinion if neither object is in the Example app (defer to default or other routers).
       elif 'Profissao' not in [obj1._meta.app_label, obj2._meta.app_label]:
-         return None
+         return True
 
       # Block relationship if one object is in the Example app and the other isn't.
-         return False
+         return True
 
    def allow_migrate(self, db, app_label, model_name=None, **hints):
       """Ensure that the Example app's models get created on the right database."""
